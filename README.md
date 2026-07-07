@@ -51,5 +51,19 @@ The skill is universal and does not depend on a specific AI platform.
 - Does not store interviews in a third-party service.
 - AI synthesis is never presented as fact without evidence.
 
+## Installation
+
+Because `interview-to-jtbd` is an AI agent skill, there is no software to install or dependencies to manage. You simply need to bring the instructions to your agent.
+
+**Option 1: Clone the repository (Recommended)**
+```bash
+git clone https://github.com/your-username/interview-to-jtbd.git
+cd interview-to-jtbd
+```
+You can then open this folder in Cursor, or run Claude Code / Gemini CLI inside this directory so the agent has full access to the `SKILL.md` instructions and the `references/` methodology.
+
+**Option 2: Direct copy-paste**
+Copy the contents of `SKILL.md` and paste it into your agent's custom instructions or prompt window.
+
 ## Getting Started
-Point your favorite AI agent (like Cursor, Claude Code, or an open-source CLI agent) to the `SKILL.md` file in this repository and ask it to analyze your research notes or interview transcripts.
+Once you have the skill ready, point your AI agent to the `SKILL.md` file (or paste its contents) and ask it to analyze your research notes or interview transcripts.
