@@ -2,6 +2,10 @@
 
 Turn messy customer interviews into JTBD maps, opportunity areas, product briefs, and hypothesis backlogs - with evidence, not vibes.
 
+<p align="center">
+  <img src="assets/social-preview.jpg" alt="interview-to-jtbd: turn interviews into evidence-backed product artifacts" width="900">
+</p>
+
 ## Overview
 
 `interview-to-jtbd` is a universal agent skill for analyzing user interviews, research notes, and open-ended customer feedback. It helps an AI agent turn raw materials into an evidence-backed JTBD (Jobs to be Done) map, opportunity map, product brief, hypothesis backlog, and plan for subsequent interviews.
