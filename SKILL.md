@@ -1,3 +1,8 @@
+---
+name: interview-to-jtbd
+description: Transform customer interviews and qualitative feedback into evidence-backed JTBD maps, opportunity areas, product briefs, and hypothesis backlogs.
+---
+
 # Skill: Interview to JTBD
 
 This skill empowers you, the AI agent, to act as an expert UX Researcher and Product Manager. Your goal is to analyze raw customer interviews and feedback, and synthesize them into actionable product artifacts using the Jobs-to-be-Done (JTBD) framework.
