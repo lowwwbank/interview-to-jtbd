@@ -43,6 +43,77 @@ then they will produce clearer product briefs faster and with fewer unsupported 
 
 See a fuller example in [`examples/demo-output/customer-research-synthesis.md`](examples/demo-output/customer-research-synthesis.md).
 
+## Prerequisites
+
+- An AI agent that can read repository files: Claude Code, Codex, Cursor, Gemini CLI, or a similar tool.
+- Git, if you want to clone the repository.
+- Customer interview transcripts, research notes, survey open-ends, support tickets, or other qualitative feedback.
+- Optional: an approved local or hosted LLM setup for confidential research data.
+
+No package manager, API key, database, or SaaS account is required by the skill itself.
+
+## Install
+
+### 1. Clone the skill
+
+```bash
+git clone https://github.com/lowwwbank/interview-to-jtbd.git
+cd interview-to-jtbd
+```
+
+### 2. Open it with your agent
+
+Use whichever agent you already work with:
+
+```bash
+# Claude Code
+claude
+
+# OpenAI Codex
+codex
+
+# Gemini CLI
+gemini
+```
+
+You can also open the folder in Cursor or any editor where your AI agent can read `SKILL.md` and the `references/` directory.
+
+### 3. Point the agent at your research
+
+Put transcripts or notes in a folder such as:
+
+```text
+research-notes/
+|-- interview-01.md
+|-- interview-02.md
+`-- survey-open-ends.csv
+```
+
+Then ask the agent:
+
+```text
+Use SKILL.md as your operating instructions.
+Analyze ./research-notes.
+Generate an evidence-backed JTBD map, opportunity map, product brief,
+hypothesis backlog, and follow-up interview guide.
+Do not invent quotes or claims. Mark unsupported assumptions explicitly.
+```
+
+### Alternative: install inside another agent workspace
+
+If you already keep agent skills in a project folder, vendor this repository as a subfolder:
+
+```bash
+mkdir -p .agents/skills
+git clone https://github.com/lowwwbank/interview-to-jtbd.git .agents/skills/interview-to-jtbd
+```
+
+Then tell your agent to use `.agents/skills/interview-to-jtbd/SKILL.md`.
+
+### Alternative: copy-paste only
+
+If your agent does not support local skill folders, copy the contents of [`SKILL.md`](SKILL.md) into the agent's custom instructions or prompt window, then paste or attach your research notes.
+
 ## Product Positioning
 
 ### Category
@@ -69,6 +140,16 @@ While existing products (Dovetail, Marvin, Condens, Looppanel, Aurelius, Product
 - no workspace, billing, onboarding, or SaaS account required
 - focuses on JTBD, rather than general qualitative analysis.
 
+## Workflow
+
+```text
+Raw interviews      Evidence extraction      JTBD synthesis       Product artifacts
+      |                     |                      |                       |
+      v                     v                      v                       v
+Transcripts  -->  Quotes, observations  -->  Jobs, outcomes  -->  Briefs, hypotheses,
+Notes             workarounds, risks         opportunities        follow-up questions
+```
+
 ## Methodology
 Based on:
 - JTBD: Users "hire" products to make progress in a specific situation.
@@ -85,33 +166,6 @@ The skill is universal and does not depend on a specific AI platform.
 - No API key required at the skill level (provider determined by the user's agent).
 - Does not store interviews in a third-party service.
 - AI synthesis is never presented as fact without evidence.
-
-## Installation
-
-Because `interview-to-jtbd` is an AI agent skill, there is no software to install or dependencies to manage. You simply need to bring the instructions to your agent.
-
-**Option 1: Clone the repository (Recommended)**
-```bash
-git clone https://github.com/lowwwbank/interview-to-jtbd.git
-cd interview-to-jtbd
-```
-You can then open this folder in Cursor, or run Claude Code / Gemini CLI inside this directory so the agent has full access to the `SKILL.md` instructions and the `references/` methodology.
-
-**Option 2: Direct copy-paste**
-Copy the contents of `SKILL.md` and paste it into your agent's custom instructions or prompt window.
-
-## Getting Started
-Once you have the skill ready, point your AI agent to the `SKILL.md` file (or paste its contents) and ask it to analyze your research notes or interview transcripts.
-
-Example prompt:
-
-```text
-Use SKILL.md as your operating instructions.
-Analyze the interview transcripts in ./research-notes.
-Generate an evidence-backed JTBD map, opportunity map, product brief,
-hypothesis backlog, and follow-up interview guide.
-Do not invent quotes or claims. Mark unsupported assumptions explicitly.
-```
 
 ## Repository Structure
 
